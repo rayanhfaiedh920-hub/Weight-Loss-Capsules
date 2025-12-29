@@ -489,3 +489,52 @@ body:has(#product-detail:target) #home-view {
         font-size: 12px;
     }
 }
+
+
+
+/* --- Kontakt-Logik --- */
+
+/* Wenn #contact-view aktiv ist: Zeigen */
+#contact-view:target {
+    display: block !important;
+}
+
+/* Wenn #contact-view aktiv ist: Home und Produkt-Details verstecken */
+#contact-view:target ~ #home-view,
+#contact-view:target ~ #product-detail,
+body:has(#contact-view:target) #home-view,
+body:has(#contact-view:target) #product-detail {
+    display: none !important;
+}
+
+/* Verstecke Kontakt, wenn wir auf Home oder Produkt sind */
+#home-view:target ~ #contact-view,
+#product-detail:target ~ #contact-view {
+    display: none !important;
+}
+
+
+/* Reparatur für die Handy-Ansicht */
+@media (max-width: 480px) {
+    .product-trust-box {
+        display: flex !important;
+        flex-direction: column !important; /* Stapelt die Elemente untereinander */
+        align-items: center !important;
+        width: 100% !important;
+        padding: 10px !important;
+        margin: 0 auto !important;
+    }
+
+    .payment-grid, .shipping-info {
+        display: flex !important;
+        flex-wrap: wrap !important; /* Erlaubt Zeilenumbruch bei den Icons */
+        justify-content: center !important;
+        gap: 10px !important;
+        margin-bottom: 15px !important;
+    }
+
+    .stock-indicator {
+        font-size: 14px !important;
+        justify-content: center !important;
+    }
+}
