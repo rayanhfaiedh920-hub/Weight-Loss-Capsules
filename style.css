@@ -358,4 +358,47 @@ body {
         padding: 15px 10px;
         text-align: left;
     }
+
+
+/* Erlaubt dem Browser, das Element anzuzeigen, wenn es als Ziel (#product-detail) aufgerufen wird */
+#product-detail:target {
+    display: flex !important;
+}
+
+/* Versteckt die Collection-Ansicht komplett, sobald das Produkt aktiv ist */
+#product-detail:target ~ #home-view,
+body:has(#product-detail:target) #home-view {
+    display: none !important;
+}
+
+
+/* --- Ende der Mobile Optimierung --- */
+} 
+
+/* WICHTIG: Diese Logik muss AUSSERHALB der @media Klammer stehen, 
+   damit sie auf PC und Handy funktioniert! 
+*/
+
+/* Zeigt das Produkt an, wenn es als Ziel (#product-detail) aufgerufen wird */
+#product-detail:target {
+    display: grid !important; /* Nutzt grid für Desktop */
+}
+
+/* Auf Handys soll es flex sein (untereinander) */
+@media (max-width: 768px) {
+    #product-detail:target {
+        display: flex !important;
+    }
+}
+
+/* Versteckt die Collection-Ansicht, sobald das Produkt aktiv ist */
+#product-detail:target ~ #home-view,
+body:has(#product-detail:target) #home-view {
+    display: none !important;
+}
+
+/* Standard-Einstellung für die Collection */
+#home-view {
+    display: flex;
+
 }
