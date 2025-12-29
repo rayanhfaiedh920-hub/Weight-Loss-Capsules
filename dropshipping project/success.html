@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="index.html" class="btn-back">Return to Shop</a>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed | Trorexl</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --brand-pink: #ff007f; /* Die Farbe deines "Buy Now" Buttons */
+            --text-dark: #333333;
+            --text-muted: #666666;
+            --bg-light: #fdfdfd;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #ffffff;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Header im Trorexl Design */
+        header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 1px solid #f0f0f0;
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: 1px;
+        }
+
+        .container {
+            max-width: 650px;
+            margin: 60px 20px;
+            text-align: center;
+            padding: 40px;
+            border-radius: 15px;
+            /* Sanfter Schatten für Tiefe */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            color: var(--text-dark);
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            background-color: var(--brand-pink);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 0 auto 30px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .important-box {
+            background-color: #fff0f6; /* Sehr helles Pink für Info-Box */
+            border-left: 4px solid var(--brand-pink);
+            padding: 20px;
+            text-align: left;
+            margin: 30px 0;
+        }
+
+        .important-box b {
+            color: var(--brand-pink);
+        }
+
+        a {
+            color: var(--brand-pink);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background-color: var(--brand-pink);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-top: 20px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .btn-back:hover {
+            background-color: #e60072;
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        Trorexl
+    </header>
+
+    <div class="container">
+        <div class="checkmark">✓</div>
+        <h1>Order Confirmed!</h1>
+        
+        <p>We have received your order and our team is working on it. You will receive a confirmation email shortly.</p>
+        
+        <div class="important-box">
+            <p style="margin: 0;"><b>Important Delivery Information:</b> To ensure the highest quality, our products are 
+                shipped directly from our specialized laboratory. Please allow 15 business days for your order to arrive
+                 at your provided address.Order tracking is currently not avaible</p>
+        </div>
+
+        <p>Thank you for choosing us for your wellness journey.</p>
+        
+       <p>If you have any questions, contact us at <br>
+           <a href="mailto:rayanhfaiedh920@gmail.com">rayanhfaiedh920@gmail.com</a></p>
+
+        <a href="index.html" class="btn-back">Return to Shop</a>
+    </div>
+
+</body>
+</html>
